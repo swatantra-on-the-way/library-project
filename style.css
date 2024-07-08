@@ -1,0 +1,146 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: paleturquoise;
+  padding-top: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+#book-library{
+  width: 100%;
+  text-align: center;
+  position: relative;
+}
+
+#books-container{
+  text-align: left;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 5px;
+  column-gap: 5px;
+  /* background-color: red; */
+}
+
+.book{
+  background-color: coral;
+  padding: 25px;
+  color: white;
+  font-size: 20px;
+}
+
+#add-book button{
+  width: 200px;
+  height: 100px;
+  background-color: papayawhip;
+  color: crimson;
+  font-size: 25px;
+  border-radius: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+#books-container .book-buttons{
+  display: flex;
+  gap: 10px;
+}
+
+#books-container .del-button, #books-container .read-status-button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  width: 80px;
+  height: 30px;
+  color: white;
+  background: black;
+  border: none;
+  border-radius: 8px;
+  flex: 1;
+}
+
+.read-status{
+  font-size: 20px;
+  color: white;
+}
+
+
+
+#dialog{
+  padding: 30px;
+  /* width: 70%; */
+  text-align: left;
+  font-size: 25px;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 2px 2px 2px lightgreen;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+#dialog form{
+  padding: 10px;
+}
+
+
+form h2{
+  text-wrap: nowrap;
+  margin-bottom: 30px;
+  color: powderblue;
+}
+form > p + p{
+  margin-top: 20px;
+}
+
+form label{
+  text-wrap: nowrap;
+}
+
+#reading-status + p{
+  margin-top: 3px;
+}
+
+p.input-data{
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+#dialog input[type = "text"], #dialog input[type = "number"]{
+  width: 200px;
+  height: 30px;
+  border: 1px solid palevioletred;
+  border-radius: 6px;
+}
+
+#dialog input[type = "submit"], #dialog #closeBtn{
+  height: 45px;
+  width: 80px;
+  font-size: 18px;
+  border-radius: 6px;
+  border: none;
+  background-color: aquamarine;
+  flex-grow: 1;
+}
+
+#dialog input[type = "submit"]{
+  color: darkgreen;
+}
+
+#dialog #closeBtn{
+  color: darkred;
+}
+
+form > :last-child{
+  display: flex;
+  gap: 50px;
+}
+

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel = "stylesheet" href = "style.css">
+  <script src = "js-file.js" defer></script>
+</head>
+<body>
+  <div id="book-library">
+    <h1>Library Project</h1>
+    <div id = "add-book">
+      <button>Add a Book</button>
+    </div>
+    <div id="books-container">
+    </div>
+    <dialog id = "dialog">
+      <form method = "dialog">
+        <h2>Enter Your Book Details</h2>
+        <p class = "input-data">
+          <label for = "author">Author:</label>
+          <input type = "text" id = "author" name = "author" aria-required="true" />
+        </p>
+        <p class = "input-data">
+          <label for = "title">Title:</label>
+          <input type = "text" id = "title" name = "title" />
+        </p>
+        <p class = "input-data">
+          <label for = "pages-count">Number of Pages:</label>
+          <input type = "number" id = "pages-count" name = "pages-count" />
+        </p>
+        <p>
+          <p id = "reading-status">Have you read this book before?</p>
+          <p>
+            <input type = "radio" value = "true" name = "book-read-status" />
+            <label for = "read-before">Yes</label>
+            <input type = "radio" value = "false" name = "book-read-status"/>
+            <label for = "not-read-before">No</label>
+          </p>
+        </p>
+        <p>
+          <input type="submit" id = "submitBtn" />
+          <button id = "closeBtn" formnovalidate>Close</button>
+        </p>
+      </form>
+    </dialog>
+  </div>
+
+</body>
+</html>
