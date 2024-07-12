@@ -53,7 +53,7 @@ body{
   gap: 30px;
   padding: 25px 0 25px 0;
   background-color: #ca8a04;
-  box-shadow: 0px 2px 10px 1px lightblue;
+  box-shadow: 0px 2px 10px 1px #ca8a04;
 }
 
 .book-icon, #add-book-button{
