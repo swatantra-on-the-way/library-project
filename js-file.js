@@ -20,7 +20,7 @@ function addBookToLibrary(title, author, numberOfPages, isRead) {
     displayBook();
 }
 
-addBookToLibrary("Discipline", "Ram", 23, false);
+addBookToLibrary("Discipline", "George", 23, false);
 
 function displayBook(){
     while(booksContainer.lastChild){
