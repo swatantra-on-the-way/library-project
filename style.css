@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 *{
   padding: 0;
   margin: 0;
@@ -5,142 +8,328 @@
 }
 
 body{
-  background-color: paleturquoise;
-  padding-top: 10px;
-  padding-left: 20px;
-  padding-right: 20px;
+  background-color: #581c87; 
+  font-family: "Quicksand", sans-serif;
 }
 
 #book-library{
   width: 100%;
-  text-align: center;
   position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
+/***                    Header                          *****/       
+
+
+#book-library .heading{
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #09090b;
+}
+
+.heading h1{
+  font-family: "Quicksand", sans-serif;
+  font-weight: 500;
+  font-size: 50px;
+  color: floralwhite;
+}
+
+.heading span{
+  display: inline-block;
+  width: 10px;
+}
+
+
+
+/*****        Add-book section                      *********/
+
+#add-book-section{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  padding: 25px 0 25px 0;
+  background-color: #ca8a04;
+  box-shadow: 0px 2px 10px 1px lightblue;
+}
+
+.book-icon, #add-book-button{
+  height: 100px;
+  font-family: "Quicksand";
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+  padding: 0.25em 0.5em;
+  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+
+#add-book-button{
+  background-color: hsl(330, 81%, 60%);
+  font-weight: 800;
+  font-size: 25px;
+  color: #09090b;
+  border: 3px solid;
+}
+
+.book-icon{
+  color: floralwhite;
+  border: 0.5px solid;
+}
+
+.book-icon img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/*****             Books Layout                         ******/
+
 #books-container{
-  text-align: left;
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  row-gap: 5px;
-  column-gap: 5px;
-  /* background-color: red; */
+  row-gap: 20px;
+  gap: 20px;
+  padding: 10px;
 }
 
 .book{
-  background-color: coral;
-  padding: 25px;
-  color: white;
-  font-size: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 12px;
+  background: #115e59;
+  border-radius: 12px;
+  box-shadow: -1px 1px 0px 0px, -2px 2px 0px 0px, -3px 3px 0px 0px, -4px 4px 0px 0px, -5px 5px 0px 0px;
+  font-size: 18px;
+  overflow: hidden;
 }
 
-#add-book button{
-  width: 200px;
-  height: 100px;
-  background-color: papayawhip;
-  color: crimson;
-  font-size: 25px;
-  border-radius: 10px;
-  margin-top: 20px;
-  margin-bottom: 20px;
+.book > *{
+  border-radius: 8px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.book > p{
+  display: flex;
+}
+
+.book > p > *{
+  flex-grow: 1;
+}
+
+.book .book div:nth-child(4){
+  font-size: 18px;
 }
 
 #books-container .book-buttons{
   display: flex;
-  gap: 10px;
+  justify-content: space-evenly;
+  border: none;
+  gap: 12px;
 }
 
 #books-container .del-button, #books-container .read-status-button{
   display: flex;
+  font-size: 16px;
   justify-content: center;
   align-items: center;
-  margin-top: 10px;
-  width: 80px;
+  width: 180px;
   height: 30px;
-  color: white;
-  background: black;
   border: none;
   border-radius: 8px;
-  flex: 1;
+  flex-grow: 1;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+  font-family: fantasy, sans-serif;
+  cursor: pointer;
+}
+
+#books-container .del-button{
+  background-color: red;
+  color: #09090b;
+}
+
+#books-container .read-status-button{
+  color: #09090b;
+  background-color: #06b6d4;
+  
+
 }
 
 .read-status{
-  font-size: 20px;
-  color: white;
+  font-weight: 700;
+  font-size: 18px;
+  font-family: "Quicksand", sans-serif;
+  letter-spacing: 0.1em;
+  color:  #09090b;
+  background-color: #ca8a04;
+}
+
+.data{
+  background-color: floralwhite;
+  color:  #09090b;
+  font-family: fantasy, sans-serif;
+  display: inline-block;
+  padding-left: 2px;
+  padding-right: 2px;
+}
+
+.value{
+  padding-left: 2px;
+  padding-right: 2px;
+  background-color:  #09090b;
+  color: floralwhite;
+  display: inline-block;
+  font-family: "Lobster Two";
 }
 
 
+/*             Dialog Modal                */
+
 
 #dialog{
-  padding: 30px;
-  /* width: 70%; */
-  text-align: left;
-  font-size: 25px;
-  border: none;
-  border-radius: 10px;
-  box-shadow: 2px 2px 2px lightgreen;
+  width: 60%;
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+  border-radius: 8px;
+  background: #f96167;
+  color: #0c0a09;
+  box-shadow: -1px 1px 0px 0px, -2px 2px 0px 0px, -3px 3px 0px 0px, -4px 4px 0px 0px, -5px 5px 0px 0px;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
 }
 
+@media only screen and (min-width: 700px){
+  #dialog{
+    width: 30%;
+  }
+
+  #books-container{
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media only screen and (min-width: 900px){
+  #books-container{
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
 
 #dialog form{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border: none;
+  padding: 4px 8px 8px 8px;
+  background: #F96167; 
+}
+
+form > *{
   padding: 10px;
 }
 
+.input-data label, #status-container{
+  font-size: 18px;
+  font-weight: 600;
+}
 
 form h2{
-  text-wrap: nowrap;
-  margin-bottom: 30px;
-  color: powderblue;
-}
-form > p + p{
-  margin-top: 20px;
-}
-
-form label{
-  text-wrap: nowrap;
-}
-
-#reading-status + p{
-  margin-top: 3px;
-}
-
-p.input-data{
+  font-family: "Lobster Two", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+  text-align: center;
   display: flex;
-  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  font-size: 35px;
+  color: #F9E795;
+  padding-top: 0;
+}
+
+
+div.input-data{
+  width: 100%;
+  height: 50px;
+  color: #0c0a09;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
   align-items: center;
 }
 
-#dialog input[type = "text"], #dialog input[type = "number"]{
-  width: 200px;
+#reading-status{
+  text-align: center;
+}
+
+#dialog input[type = "number"]{
+  width: 100px;
+  background: #0c0a09;
+}
+
+#dialog input[type = "number"], #dialog input[type = "text"]{
+  padding: 0 10px 0 10px;
+  font-size: 16px;
+  color: white;
+  background: #0c0a09;
   height: 30px;
-  border: 1px solid palevioletred;
-  border-radius: 6px;
-}
-
-#dialog input[type = "submit"], #dialog #closeBtn{
-  height: 45px;
-  width: 80px;
-  font-size: 18px;
-  border-radius: 6px;
   border: none;
-  background-color: aquamarine;
+  border-radius: 6px;
+
+}
+
+#dialog input[type = "text"]{
+  width: 70%;
+}
+
+#dialog #submitBtn, #dialog #closeBtn{
+  height: 35px;
+  font-size: 18px;
+  border-radius: 8px;
+  border: none;
+  background-color: #09090b;
+  color: #f9e795;
   flex-grow: 1;
+  cursor: pointer;
 }
 
-#dialog input[type = "submit"]{
-  color: darkgreen;
-}
-
-#dialog #closeBtn{
-  color: darkred;
-}
-
-form > :last-child{
+#reading-status-radio-buttons{
   display: flex;
-  gap: 50px;
+  justify-content: center;
+  gap: 20px;
 }
+
+input[type="radio"]{
+  -webkit-transform: scale(1.5);
+  transform: scale(1.2);
+}
+
+#form-buttons{
+  display: flex;
+  gap: 40px;
+  padding: 0 20px 0 20px;
+}
+
+#dialog label, #reading-status{
+  color: #F9E795;
+  font-size: 18px;
+  font-weight: 300;
+  font-style: normal;
+}
+
 

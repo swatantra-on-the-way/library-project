@@ -4,45 +4,63 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link href="https://fonts.googleapis.com/css?family=Cardo:400,700|Oswald" rel="stylesheet">
   <link rel = "stylesheet" href = "style.css">
   <script src = "js-file.js" defer></script>
 </head>
 <body>
   <div id="book-library">
-    <h1>Library Project</h1>
-    <div id = "add-book">
-      <button>Add a Book</button>
+    <div class="heading">
+      <h1>LIBRARY <span> </span>PROJECT</h1>
+    </div>
+    <div id = "add-book-section">
+      <div class = "book-icon">
+        <img src = "images/book-icon1.svg" alt = "book-icon-1">
+      </div>
+      <button id = "add-book-button">Add a Book</button>
+      <div class = "book-icon">
+        <img src = "images/book-icon2.svg" alt = "book-icon-2">
+      </div>
     </div>
     <div id="books-container">
     </div>
     <dialog id = "dialog">
       <form method = "dialog">
         <h2>Enter Your Book Details</h2>
-        <p class = "input-data">
-          <label for = "author">Author:</label>
-          <input type = "text" id = "author" name = "author" aria-required="true" />
-        </p>
-        <p class = "input-data">
+        
+        <div class = "input-data">
           <label for = "title">Title:</label>
-          <input type = "text" id = "title" name = "title" />
-        </p>
-        <p class = "input-data">
+          <input type = "text" id = "title" name = "title" required />
+        </div>
+
+        <div class = "input-data">
+          <label for = "author">Author:</label>
+          <input type = "text" id = "author" name = "author" aria-required="true" required />
+        </div>
+
+        <div class = "input-data">
           <label for = "pages-count">Number of Pages:</label>
-          <input type = "number" id = "pages-count" name = "pages-count" />
-        </p>
-        <p>
-          <p id = "reading-status">Have you read this book before?</p>
-          <p>
-            <input type = "radio" value = "true" name = "book-read-status" />
-            <label for = "read-before">Yes</label>
-            <input type = "radio" value = "false" name = "book-read-status"/>
-            <label for = "not-read-before">No</label>
-          </p>
-        </p>
-        <p>
-          <input type="submit" id = "submitBtn" />
+          <input type = "number" id = "pages-count" name = "pages-count" required />
+        </div>
+
+        <div id = "status-container">
+          <div id = "reading-status">Have you read this book before?</div>
+          <div id = "reading-status-radio-buttons">
+            <div id="button-1">
+              <input type = "radio" value = "true" name = "book-read-status" required />
+              <label for = "read-before">Yes</label>
+            </div>
+            <div id="button-2">
+              <input type = "radio" value = "false" name = "book-read-status"/>
+              <label for = "not-read-before">No</label>
+            </div>
+          </div>
+        </div>
+
+        <div id = "form-buttons">
+          <button id = "submitBtn">Submit</button>
           <button id = "closeBtn" formnovalidate>Close</button>
-        </p>
+        </div>
       </form>
     </dialog>
   </div>
