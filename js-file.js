@@ -1,18 +1,36 @@
 const myLibrary = [];
 const booksContainer = document.querySelector("#books-container");
 
-function Book(title, author, numberOfPages, isRead){
-    this.title = title;
-    this.author = author;
-    this.numberOfPages = numberOfPages;
+// function Book(title, author, numberOfPages, isRead){
+//     this.title = title;
+//     this.author = author;
+//     this.numberOfPages = numberOfPages;
 
-    if (isRead === "true"){
-        this.isRead = true;
-    }
-    else {
-        this.isRead = false;
+//     if (isRead === "true"){
+//         this.isRead = true;
+//     }
+//     else {
+//         this.isRead = false;
+//     }
+// }
+
+
+/* Alternative of a book template using class feature  */
+class Book{
+    constructor(title, author, numberOfPages, isRead){
+        this.title = title;
+        this.author = author;
+        this.numberOfPages = numberOfPages;
+
+        if(isRead === "true"){
+            this.isRead = true;
+        }
+        else{
+            this.isRead = false;
+        }
     }
 }
+
 
 function addBookToLibrary(title, author, numberOfPages, isRead) {
     let book = new Book(title, author, numberOfPages, isRead)
