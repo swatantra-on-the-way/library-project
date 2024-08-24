@@ -126,8 +126,6 @@ function deleteBook(book){
     displayBook();
 }
 
-// function toggleReadStatus()
-
 
 const showBtn = document.querySelector("#add-book-button");
 const closeBtn = dialog.querySelector("#closeBtn");
@@ -148,12 +146,11 @@ bookIconArray.forEach(icon => {
 
 
 submitBtn.addEventListener("click", (e) => {
+    e.preventDefault();
     let author = dialog.querySelector("#author");
     let title = dialog.querySelector("#title");
     let pageCount = dialog.querySelector("#pages-count");
     let readBefore = dialog.querySelector("input[name = book-read-status]:checked");
-    console.log(pageCount.value);
-    console.log(readBefore);
     if (readBefore){
         if ((author.value) && (title.value) && (pageCount.value > 0) && (readBefore.value)){
             addBookToLibrary(title.value, author.value, pageCount.value, readBefore.value);
